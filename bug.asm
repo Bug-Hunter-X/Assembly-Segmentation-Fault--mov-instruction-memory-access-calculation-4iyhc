@@ -1,0 +1,3 @@
+mov eax, [ebx+esi*4+0x10]
+
+This instruction attempts to access memory using the EBX, ESI, and a displacement of 0x10. If the calculation of EBX + ESI * 4 + 0x10 results in an address outside the allowed memory range, it will cause a segmentation fault or general protection fault.  The issue is subtle because it only happens under specific conditions when ESI or EBX take on certain values during runtime.
